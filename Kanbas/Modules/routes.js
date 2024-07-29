@@ -19,11 +19,11 @@ export default function ModuleRoutes(app) {
         res.send(newModule);
     });
     
-    app.get("/api/courses/:cid/modules", (req, res) => {
-        const { cid } = req.params;
-        const modules = db.modules.filter((m) => m.course === cid)
-        res.json(modules)
-    });
+    // app.get("/api/courses/:cid/modules", (req, res) => {
+    //     const { cid } = req.params;
+    //     const modules = db.modules.filter((m) => m.course === cid)
+    //     res.json(modules)
+    // });
 
     app.put("/api/modules/:mid", (req, res) => {
         const { mid } = req.params;
