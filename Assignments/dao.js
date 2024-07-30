@@ -1,23 +1,3 @@
-// import model from "./model.js";
-
-
-// export const createAssignment = (assignment) => {
-//     delete assignment._id;
-//     return model.create(assignment);
-// };
-// export const findAssignmentByPartialTitle = (partialTitle) => {
-//     const regex = new RegExp(partialTitle, "i");
-//     return model.find({ title: { $regex: regex }});
-// }
-
-// export const deleteAssignment = (assignmentId) => model.deleteOne({_id: assignmentId});
-// export const findAllAssignments = () =>  model.find();
-// export const findAssignmentByTitle = (title) =>  model.find({title: title});
-// export const findAssignmentById = (assignmentId) => model.findOne(assignmentId);
-// export const findAssignmentByCourse = (course) => model.find({course: course});
-// export const updateAssignment = (assignmentId) => model.updateOne({_id: assignmentId});
-
-
 import model from "./model.js";
 
 export const createAssignment = (assignment) => {

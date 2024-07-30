@@ -8,9 +8,6 @@ import cors from "cors";
 import CourseRoutes from "./Courses/routes.js";
 import ModuleRoutes from "./Modules/routes.js";
 import AssignmentRoutes from "./Assignments/routes.js";
-// import CourseRoutes from "./Kanbas/Courses/routes.js";
-// import ModuleRoutes from "./Kanbas/Modules/routes.js";
-// import AssignmentRoutes from "./Kanbas/Assignment/routes.js";
 import "dotenv/config";
 import session from "express-session";
 
