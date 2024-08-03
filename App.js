@@ -8,6 +8,7 @@ import cors from "cors";
 import CourseRoutes from "./Courses/routes.js";
 import ModuleRoutes from "./Modules/routes.js";
 import AssignmentRoutes from "./Assignments/routes.js";
+import QuizRoutes from "./Quizzes/routes.js";
 import "dotenv/config";
 import session from "express-session";
 
@@ -45,6 +46,7 @@ UserRoutes(app);
 CourseRoutes(app);
 ModuleRoutes(app);
 AssignmentRoutes(app);
+QuizRoutes(app);
 Hello(app);
 Lab5(app);
 app.listen(process.env.PORT || 4000);

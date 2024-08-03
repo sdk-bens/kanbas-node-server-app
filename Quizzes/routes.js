@@ -87,8 +87,8 @@ export default function QuizRoutes(app) {
     };
 
     const findQuizzesForCourse = async (req, res) => {
-        const courseId = req.params.courseId;
-        const quizzes = await dao.findCourseQuizzes(courseId);
+        const { courseNumber } = req.params;
+        const quizzes = await dao.findCourseQuizzes(courseNumber);
         res.json(quizzes);
     };
 
@@ -111,7 +111,7 @@ export default function QuizRoutes(app) {
     };
 
     app.post("/api/courses/:courseId/quizzes", createQuiz);
-    app.get("/api/courses/:courseId/quizzes", findQuizzesForCourse); // Specific course quizzes
+    app.get("/api/courses/:courseNumber/quizzes", findQuizzesForCourse); // Specific course quizzes
     app.get("/api/quizzes", findAllQuizzes); // Generic search
     app.get("/api/quizzes/:quizId", findQuizById);
     app.put("/api/quizzes/:quizId", updateQuiz);
